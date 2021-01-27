@@ -26,8 +26,6 @@ credentials = "../../creds/serviceaccount.json"
 # ========================================================================================
 
 
-  bq_staging_dataset = "myDataset0"
-
 
   bq_datasets_delete_data_on_destroy = true
 
