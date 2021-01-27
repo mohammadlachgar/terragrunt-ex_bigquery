@@ -10,7 +10,7 @@ credentials = "../../creds/serviceaccount.json"
 
 
 # ========================================================================================
-# GCP BIGQUERY GENERIC PROPERTIES
+# GCP BIGQUERY GENERIC PROPERTIES 
 # ========================================================================================
 
 
