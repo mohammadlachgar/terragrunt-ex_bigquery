@@ -15,6 +15,10 @@
     }
   }
 
+locals {
+env = var.env
+bq_staging_dataset = var.bq_staging_dataset
+}
 
 remote_state {
   backend = "gcs"
@@ -51,7 +55,7 @@ module "crTables" {
   source  = "../../modules/crTables/"
   project = var.project
   env     = var.env
-  bq_staging_dataset = var.bq_staging_dataset
+  bq_staging_dataset = "${local.env}_${local.bq_staging_dataset}"
   bq_description = var.bq_description
   bq_location = var.bq_location
   bq_datasets_delete_data_on_destroy = var.bq_datasets_delete_data_on_destroy
